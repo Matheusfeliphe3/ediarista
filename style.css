@@ -140,3 +140,63 @@ header {
     bottom: 35px;
     z-index: 50;
 }
+.porque {
+    background-image: linear-gradient(var(--secondary), var(--primary));
+    margin-top: -100px;
+    padding: 100px 0;
+    color: #fff;
+    position: relative;
+}
+
+.porque::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 4px #fff;
+    background-color: var(--secondary);
+    background-image: url('./img/icon-triangulo\ \(2\).png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    right: 50%;
+    top: -30px;
+    transform: translate(50%);
+    position: absolute;
+}
+.porque h2 {
+    margin: 0 0 30px 0;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.porque hr {
+   width: 10%;
+   border-color: rgba( 255, 255, 255, 0.25);
+
+}
+.porque-campos-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.porque-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.porque-item h4, .porque-item p {
+    margin: 0; 
+}
+
+.porque-item div:first-child {
+    border: solid 2px #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.porque-item i {
+    font-size: 40px
+}
