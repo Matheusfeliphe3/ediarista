@@ -13,3 +13,39 @@ for(i = 0;i < acc.length;i++){
         }
     })
 }
+
+var menu = document.getElementsByClassName('menu-mobile');
+var u;
+
+for (u = 0; u < menu.length; u++) {
+    menu[u].addEventListener('click', function() {
+        this.classList.toggle('active-menu');
+
+        var buttons = document.querySelector('.btn-header-mobile')
+
+        if (buttons.style.display === 'flex') {
+            buttons.style.display = 'none';
+        } else {
+            buttons.style.display = 'flex';
+        }
+    })
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    var buttom = document.querySelector('.btn-header-mobile')
+    function verificarTamanhoTela() {
+      if (window.innerWidth > 600) {
+        buttom.style.display = 'none';
+       
+        var menuItems = document.getElementsByClassName('menu-mobile');
+            for (var j = 0; j < menuItems.length; j++) {
+                menuItems[j].classList.remove('active-menu');
+            }
+      } 
+    }
+    verificarTamanhoTela();
+  
+    window.addEventListener('resize', verificarTamanhoTela);
+
+});
